@@ -1,6 +1,6 @@
 # Laravel 6 Circuit Breaker
 
-This package provides an implementation of Circuit Breaker pattern for Laravel 5.
+This package provides an implementation of Circuit Breaker pattern for Laravel 6.
 
 It is a fork of https://github.com/rymanalu/laravel-circuit-breaker updated for Laravel 6.x.
 
