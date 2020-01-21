@@ -56,7 +56,7 @@ class CircuitBreaker implements CircuitBreakerInterface
      */
     public function track($key, $decayMinutes = 1)
     {
-        $this->cache->add($key, 1, $decayMinutes);
+        $this->cache->add($key, 1, $decayMinutes * 60);
 
         return (int) $this->cache->increment($key);
     }
@@ -76,7 +76,7 @@ class CircuitBreaker implements CircuitBreakerInterface
         }
 
         if ($this->failures($key) > $maxFailures) {
-            $this->cache->add($key.':breakout', Carbon::now()->getTimestamp() + ($decayMinutes * 60), $decayMinutes);
+            $this->cache->add($key.':breakout', Carbon::now()->getTimestamp() + ($decayMinutes * 60), $decayMinutes * 60);
 
             $this->resetFailures($key);
 
