@@ -1,13 +1,13 @@
 {
     "name": "rymanalu/laravel-circuit-breaker",
-    "description": "Circuit Breaker pattern implementation in Laravel 5.",
+    "description": "Circuit Breaker pattern implementation in Laravel 6+.",
     "keywords": ["laravel", "circuit breaker"],
     "type": "library",
     "require": {
         "php": "^7.2",
         "nesbot/carbon": "^2.0",
-        "illuminate/support": "^6.0",
-        "illuminate/contracts": "^6.0"
+        "illuminate/support": "^6.0|^7.0",
+        "illuminate/contracts": "^6.0|^7.0"
     },
     "require-dev": {
         "mockery/mockery": "~0.9",
